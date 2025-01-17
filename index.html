@@ -121,41 +121,48 @@
     <div class="container">
         <h1>Hi, I'm Shivang Chaudhary</h1>
         <p>Computer Science undergrad and AI enthusiast building innovative solutions with machine learning and software development.</p>
-
-        <!-- New Buttons Below -->
-        <div class="mt-4">
-            <a href="#education" class="btn btn-primary my-2">Education</a>
-            <a href="#projects" class="btn btn-primary my-2">View My Projects</a>
-            <a href="#contact" class="btn btn-primary my-2">Contact Me</a>
-        </div>
+        <!-- Buttons -->
+        <a href="#education" class="btn btn-primary my-2">Education</a>
+        <a href="#projects" class="btn btn-primary my-2">View My Projects</a>
+        <a href="#contact" class="btn btn-primary my-2">Contact Me</a>
     </div>
 </section>
 
+
    <style>
+    /* General Button Styling */
     .btn-primary {
-        background-color: #007bff;
+        background-color: #007bff; /* Consistent blue color */
         color: white;
-        padding: 5px 15px; /* Adjusted padding for compact size */
+        padding: 8px 20px; /* Standard padding */
         font-size: 16px;
         border: none;
         border-radius: 5px;
         text-decoration: none;
-        width: 150px; /* Set fixed width */
-        max-width: 100%; /* Ensures responsiveness */
-        text-align: center; /* Centers text inside the button */
+        display: inline-block; /* Keeps buttons inline if needed */
+        text-align: center;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
+    /* Hover Effect */
     .btn-primary:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
+        background-color: #0056b3; /* Darker blue for hover */
+        transform: scale(1.05); /* Slight zoom effect */
     }
 
+    /* Ensure Buttons Adjust to Text Length */
+    .btn {
+        min-width: 150px; /* Ensures consistent minimum width */
+        max-width: 250px; /* Prevents overly wide buttons */
+    }
+
+    /* Centered Layout for Buttons in Hero Section */
     .my-2 {
-        display: block; /* Ensures buttons stack vertically */
-        margin: 10px auto; /* Center-aligns buttons */
+        display: block;
+        margin: 10px auto; /* Center-align buttons */
     }
 </style>
+
 
 
 
