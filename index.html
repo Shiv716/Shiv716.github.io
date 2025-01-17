@@ -32,6 +32,7 @@
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #hero p {
@@ -47,23 +48,24 @@
         /* Projects Section */
         #projects {
             background-color: #f4f4f9;
+            padding: 60px 20px;
         }
 
         .project-card {
             border: none;
-            background: #fff;
+            background: white;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
+            transform: scale(1.05);
             box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card .card-body {
-            text-align: center;
         }
 
         .project-card h5 {
@@ -71,11 +73,20 @@
             margin-bottom: 10px;
         }
 
+        .project-card .btn {
+            margin: 5px 0;
+        }
+
         /* About Me Section */
         #about {
             background: linear-gradient(to right, #fbc2eb, #a6c1ee);
             color: #333;
             text-align: center;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
 
         /* Contact Section */
@@ -92,6 +103,16 @@
         #contact a:hover {
             text-decoration: underline;
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
@@ -106,7 +127,7 @@
     <section id="projects" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Projects</h2>
-            <div class="row">
+            <div class="row g-4">
                 <!-- Project 1 -->
                 <div class="col-md-4">
                     <div class="card project-card shadow">
@@ -134,12 +155,16 @@
                 </div>
 
                 <!-- Project 3 -->
+                <!-- Recon_Bird Card -->
                 <div class="col-md-4">
                     <div class="card project-card shadow">
                         <div class="card-body">
                             <h5 class="card-title">Recon_Bird</h5>
                             <p class="card-text">
-                                Built Python-based UI software with TensorFlow and OpenCV, enabling drones to perform real-time object detection in hazardous environments. Enhanced safety and efficiency in industries, integrated material flaw detection.
+                                Developed a cutting-edge solution for enhancing safety and efficiency in hazardous industrial environments, such as oil factories. 
+                                Utilizing OpenCV's object detection models (Faster R-CNN and SSD), the software enables real-time detection of machinery flaws, achieving an accuracy of 97% in damage detection. 
+                                Integrated robust user authentication mechanisms to safeguard sensitive data and ensure secure usage. 
+                                Designed the user interface with Python Kivy for seamless drone piloting and monitoring capabilities.
                             </p>
                             <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary">GitHub Repository</a>
                             <a href="https://tinyurl.com/Recon-Bird" class="btn btn-secondary">Watch Reel</a>
