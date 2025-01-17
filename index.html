@@ -27,13 +27,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            animation: fadeIn 3s ease-in-out;
         }
 
         #hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            animation: slideInDown 1.5s ease-out;
         }
 
         #hero p {
@@ -66,11 +64,6 @@
             text-align: center;
         }
 
-        #about p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
         /* Contact Section */
         #contact {
             background-color: #222;
@@ -84,27 +77,6 @@
 
         #contact a:hover {
             text-decoration: underline;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
         }
     </style>
 </head>
@@ -124,16 +96,42 @@
                 <!-- Project 1 -->
                 <div class="col-md-4">
                     <div class="card project-card shadow">
-                        <img src="project1-image.png" class="card-img-top" alt="Project 1">
                         <div class="card-body">
-                            <h5 class="card-title">Project Title</h5>
-                            <p class="card-text">Short description of the project.</p>
-                            <a href="https://github.com/username/project1" class="btn btn-primary">GitHub</a>
-                            <a href="https://project1-demo.com" class="btn btn-secondary">Demo</a>
+                            <h5 class="card-title">Grammatical Error Correction Model</h5>
+                            <p class="card-text">
+                                Developed an optimized NLP model using Google T5, achieving an F<sub>0.5</sub> token-based score of 68.86% on the cLang-8 dataset and 56.33% on CoNLL-2014. Delivered a highly efficient tool for English grammatical error correction.
+                            </p>
+                            <p><strong>Duration:</strong> Jan 2024 – Aug 2024</p>
                         </div>
                     </div>
                 </div>
-                <!-- Add more projects as needed -->
+
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Curve-fitting Algorithm</h5>
+                            <p class="card-text">
+                                Led a team to build a curve-fitting algorithm for bot behavior data, improving malicious bot detection accuracy by 5%. Achieved monthly savings of £8,000 for clients through enhanced detection techniques.
+                            </p>
+                            <p><strong>Duration:</strong> Aug 2023 – Sept 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">Drone Software with Object Detection</h5>
+                            <p class="card-text">
+                                Built Python-based UI software with TensorFlow and OpenCV, enabling drones to perform real-time object detection in hazardous environments. Enhanced safety and efficiency in industries, integrated material flaw detection.
+                            </p>
+                            <p><a href="https://tinyurl.com/Recon-Bird" target="_blank">Watch Reel</a></p>
+                            <p><strong>Duration:</strong> Sept 2022 – May 2023</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -154,7 +152,6 @@
     <section id="contact" class="py-5">
         <div class="container text-center">
             <h2>Contact</h2>
-            <p class="mb-4">Feel free to reach out via:</p>
             <p>Email: <a href="mailto:shivang@example.com">shivang@example.com</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/shivangchaudhary">linkedin.com/in/shivangchaudhary</a></p>
             <p>GitHub: <a href="https://github.com/shivangchaudhary">github.com/shivangchaudhary</a></p>
