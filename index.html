@@ -260,7 +260,7 @@
             <div class="col-md-4">
                 <div class="card project-card shadow h-100 position-relative">
                     <!-- Default State: Image -->
-                    <img src="images/recon_bird_output.png" alt="Recon Bird Output" class="img-fluid project-image">
+                    <img src="images/recon_bird_output.png" class="img-fluid project-image">
 
                     <!-- Hover State: Details -->
                     <div class="card-body d-flex flex-column text-center overlay">
@@ -279,7 +279,7 @@
             <div class="col-md-4">
                 <div class="card project-card shadow h-100 position-relative">
                     <!-- Default State: Image -->
-                    <img src="images/curve_fitting_output.png" alt="Curve Fitting Output" class="img-fluid project-image">
+                    <img src="images/curve_fitting_output.png" class="img-fluid project-image">
 
                     <!-- Hover State: Details -->
                     <div class="card-body d-flex flex-column text-center overlay">
@@ -297,7 +297,7 @@
             <div class="col-md-4">
                 <div class="card project-card shadow h-100 position-relative">
                     <!-- Default State: Image -->
-                    <img src="images/gec_gt5_output.png" alt="GEC Output" class="img-fluid project-image">
+                    <img src="images/gec_gt5_output.png" class="img-fluid project-image">
 
                     <!-- Hover State: Details -->
                     <div class="card-body d-flex flex-column text-center overlay">
@@ -317,7 +317,7 @@
             <div class="col-md-4">
                 <div class="card project-card shadow h-100 position-relative">
                     <!-- Default State: Image -->
-                    <img src="images/enigma_machine_output.png" alt="Enigma Machine Output" class="img-fluid project-image">
+                    <img src="images/enigma_machine_output.png" class="img-fluid project-image">
 
                     <!-- Hover State: Details -->
                     <div class="card-body d-flex flex-column text-center overlay">
@@ -335,14 +335,6 @@
 </section>
 
 <style>
-    /* Center Buttons */
-    .btn-primary, .btn-secondary {
-        margin: 5px auto; /* Center-align buttons */
-        padding: 10px 20px; /* Restore original padding */
-        font-size: 16px; /* Standard font size */
-        display: block;
-    }
-
     /* Project Card Base Styling */
     .project-card {
         overflow: hidden;
@@ -380,6 +372,8 @@
         align-items: center;
         padding: 20px;
         transition: opacity 0.3s ease;
+        font-size: 1.2em; /* Increase text size */
+        line-height: 1.5; /* Improve text readability */
     }
 
     /* Hover Effect - Show Details */
@@ -391,8 +385,15 @@
     .project-card:hover .project-image {
         opacity: 0;
     }
-</style>
 
+    /* Buttons Styling */
+    .btn-primary, .btn-secondary {
+        margin: 5px auto; /* Center-align buttons */
+        padding: 10px 20px; /* Restore original padding */
+        font-size: 16px; /* Standard font size */
+        display: block;
+    }
+</style>
 
     <!-- About Me Section -->
     <section id="about" class="py-5">
