@@ -172,10 +172,12 @@
             <!-- MSc. Artificial Intelligence -->
             <div class="col-md-6">
                 <div class="card shadow h-100 position-relative">
+                    <!-- University Logo -->
+                    <img src="images/kings_college_logo.png" alt="" class="card-img-top p-3" style="height: 100px; object-fit: contain;">
+                    <!-- Card Body -->
                     <div class="card-body text-center">
                         <h5 class="card-title">MSc. Artificial Intelligence</h5>
                         <p class="card-text">King's College London</p>
-                        <a href="https://www.kcl.ac.uk" class="btn btn-primary">Visit Website</a>
                     </div>
                     <!-- Hover State: Course Modules -->
                     <div class="education-overlay text-center">
@@ -193,10 +195,12 @@
             <!-- BSc. Computer Science -->
             <div class="col-md-6">
                 <div class="card shadow h-100 position-relative">
+                    <!-- University Logo -->
+                    <img src="images/huddersfield_logo.png" alt="" class="card-img-top p-3" style="height: 100px; object-fit: contain;">
+                    <!-- Card Body -->
                     <div class="card-body text-center">
                         <h5 class="card-title">BSc. (Hons) Computer Science</h5>
                         <p class="card-text">University of Huddersfield</p>
-                        <a href="https://www.hud.ac.uk" class="btn btn-primary">Visit Website</a>
                     </div>
                     <!-- Hover State: Course Modules -->
                     <div class="education-overlay text-center">
@@ -215,25 +219,6 @@
 </section>
 
 <style>
-    /* General Button Styling */
-    .btn-primary {
-        background-color: #007bff; /* Consistent blue color */
-        color: white;
-        padding: 8px 20px; /* Standard padding */
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn-primary:hover {
-        background-color: #0056b3; /* Darker blue for hover */
-        transform: scale(1.05); /* Slight zoom effect */
-    }
-
     /* Education Card Styling */
     .card {
         position: relative;
@@ -244,6 +229,12 @@
     .card:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* University Logo Styling */
+    .card-img-top {
+        background-color: #f8f9fa; /* Light background for logo area */
+        border-bottom: 1px solid #ddd;
     }
 
     /* Overlay Styling */
@@ -260,6 +251,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
         transition: opacity 0.3s ease;
     }
 
@@ -277,7 +269,28 @@
     .education-overlay li {
         margin: 5px 0;
     }
+
+    /* Button Styling (Consistent Across Site) */
+    .btn-primary {
+        background-color: #007bff; /* Consistent blue color */
+        color: white;
+        padding: 12px 20px; /* Increased button height */
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker blue for hover */
+        transform: scale(1.05); /* Slight zoom effect */
+    }
 </style>
+
+    
     
 <!-- Projects Section -->
 <section id="projects" class="py-5">
