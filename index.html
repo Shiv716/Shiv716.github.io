@@ -251,7 +251,7 @@
 </style>
 
     
- <!-- Projects Section -->
+<!-- Projects Section -->
 <section id="projects" class="py-5">
     <div class="container">
         <h2 class="text-center mb-5">Projects</h2>
@@ -268,8 +268,8 @@
                             Built a drone control UI with Python Kivy and integrated real-time object detection using Faster R-CNN and SSD. Achieved 97% accuracy in damage detection, improving safety in hazardous industrial environments.
                         </p>
                         <div class="mt-auto">
-                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary btn-uniform">GitHub Repository</a>
-                            <a href="https://tinyurl.com/Recon-Bird" class="btn btn-secondary btn-uniform">Watch Reel</a>
+                            <a href="https://tinyurl.com/Recon-Bird" class="btn btn-primary my-2">Watch Reel</a>
+                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary my-2">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -284,12 +284,10 @@
                     <!-- Hover State: Details -->
                     <div class="card-body d-flex flex-column text-center overlay">
                         <p class="card-text">
-                            Developed a curve-fitting algorithm for bot behavior data, improving detection accuracy by 5%. Saved £8,000/month for clients by enhancing malicious bot detection.
-                            The algorithm processes real-time input data to predict bot behavior trends effectively.
-                            Successfully deployed on client websites, ensuring a 15% increase in model prediction speed.
+                            Developed a curve-fitting algorithm for bot behavior data, improving detection accuracy by 5%. Saved £8,000/month for clients by enhancing malicious bot detection. The algorithm processes real-time input data to predict bot behavior trends effectively. Successfully deployed on client websites, ensuring a 15% increase in model prediction speed.
                         </p>
                         <div class="mt-auto">
-                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary btn-uniform">GitHub Repository</a>
+                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary my-2">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -307,7 +305,7 @@
                             Optimized Google T5 for grammatical error correction, achieving 68.86% F<sub>0.5</sub> score on cLang-8 and 56.33% on CoNLL-2014. Built a state-of-the-art NLP model for English grammar correction.
                         </p>
                         <div class="mt-auto">
-                            <a href="https://github.com/Shiv716/gt5-GEC_T5" class="btn btn-primary btn-uniform">GitHub Repository</a>
+                            <a href="https://github.com/Shiv716/gt5-GEC_T5" class="btn btn-primary my-2">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -327,7 +325,7 @@
                             Developed a Java and JavaFX-based encryption system inspired by Alan Turing's Enigma machine. Supports 26³ letter combinations and allows swapping 10 letters for enhanced security. Decryption is exclusive to the system, ensuring message confidentiality.
                         </p>
                         <div class="mt-auto">
-                            <a href="https://github.com/Shiv716/Enigma_Java-JavaFx" class="btn btn-primary btn-uniform">GitHub Repository</a>
+                            <a href="https://github.com/Shiv716/Enigma_Java-JavaFx" class="btn btn-primary my-2">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -337,7 +335,39 @@
 </section>
 
 <style>
-    /* Project Card Base Styling */
+    /* General Button Styling (Same as Hero Section) */
+    .btn-primary {
+        background-color: #007bff; /* Consistent blue color */
+        color: white;
+        padding: 8px 20px; /* Standard padding */
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block; /* Keeps buttons inline if needed */
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Hover Effect */
+    .btn-primary:hover {
+        background-color: #0056b3; /* Darker blue for hover */
+        transform: scale(1.05); /* Slight zoom effect */
+    }
+
+    /* Ensure Buttons Adjust to Text Length */
+    .btn {
+        min-width: 150px; /* Ensures consistent minimum width */
+        max-width: 250px; /* Prevents overly wide buttons */
+    }
+
+    /* Centered Layout for Buttons */
+    .my-2 {
+        display: block;
+        margin: 10px auto; /* Center-align buttons */
+    }
+
+    /* Project Card Styling */
     .project-card {
         overflow: hidden;
         position: relative;
@@ -386,15 +416,6 @@
     /* Hover Effect - Hide Image */
     .project-card:hover .project-image {
         opacity: 0;
-    }
-
-    /* Uniform Button Sizes */
-    .btn-uniform {
-        width: 150px; /* Set consistent width for all buttons */
-        padding: 10px 15px; /* Adjust padding */
-        font-size: 16px;
-        margin: 5px auto; /* Center-align buttons */
-        text-align: center;
     }
 </style>
 
