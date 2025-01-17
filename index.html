@@ -164,21 +164,6 @@
 </style>
 
 
-
-
-
-    <!-- Hero Section -->
-<section id="hero" class="py-5 text-center" style="background: linear-gradient(to right, #6a11cb, #2575fc); color: white;">
-    <div class="container">
-        <h1>Hi, I'm Shivang Chaudhary</h1>
-        <p>Computer Science undergrad and AI enthusiast building innovative solutions with machine learning and software development.</p>
-        <!-- Buttons -->
-        <a href="#education" class="btn btn-primary my-2">Education</a>
-        <a href="#projects" class="btn btn-primary my-2">View My Projects</a>
-        <a href="#contact" class="btn btn-primary my-2">Contact Me</a>
-    </div>
-</section>
-
 <!-- Education Section -->
 <section id="education" class="py-5">
     <div class="container">
@@ -186,11 +171,11 @@
         <div class="row g-4">
             <!-- MSc. Artificial Intelligence -->
             <div class="col-md-6">
-                <div class="card education-card shadow h-100 position-relative">
-                    <!-- Default State: Education Title -->
+                <div class="card shadow h-100 position-relative">
                     <div class="card-body text-center">
                         <h5 class="card-title">MSc. Artificial Intelligence</h5>
                         <p class="card-text">King's College London</p>
+                        <a href="https://www.kcl.ac.uk" class="btn btn-primary">Visit Website</a>
                     </div>
                     <!-- Hover State: Course Modules -->
                     <div class="education-overlay text-center">
@@ -207,11 +192,11 @@
 
             <!-- BSc. Computer Science -->
             <div class="col-md-6">
-                <div class="card education-card shadow h-100 position-relative">
-                    <!-- Default State: Education Title -->
+                <div class="card shadow h-100 position-relative">
                     <div class="card-body text-center">
                         <h5 class="card-title">BSc. (Hons) Computer Science</h5>
                         <p class="card-text">University of Huddersfield</p>
+                        <a href="https://www.hud.ac.uk" class="btn btn-primary">Visit Website</a>
                     </div>
                     <!-- Hover State: Course Modules -->
                     <div class="education-overlay text-center">
@@ -239,65 +224,50 @@
         border: none;
         border-radius: 5px;
         text-decoration: none;
-        display: inline-block; /* Keeps buttons inline if needed */
+        display: inline-block;
         text-align: center;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    /* Hover Effect */
     .btn-primary:hover {
         background-color: #0056b3; /* Darker blue for hover */
         transform: scale(1.05); /* Slight zoom effect */
     }
 
-    /* Ensure Buttons Adjust to Text Length */
-    .btn {
-        min-width: 150px; /* Ensures consistent minimum width */
-        max-width: 250px; /* Prevents overly wide buttons */
-    }
-
-    /* Centered Layout for Buttons in Hero Section */
-    .my-2 {
-        display: block;
-        margin: 10px auto; /* Center-align buttons */
-    }
-
-    /* Education Card Base Styling */
-    .education-card {
-        overflow: hidden;
+    /* Education Card Styling */
+    .card {
         position: relative;
+        overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .education-card:hover {
+    .card:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    /* Education Overlay - Initially Hidden */
+    /* Overlay Styling */
     .education-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.85); /* Dark background */
+        background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
         color: white;
         opacity: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 20px;
         transition: opacity 0.3s ease;
     }
 
-    /* Show Overlay on Hover */
-    .education-card:hover .education-overlay {
+    .card:hover .education-overlay {
         opacity: 1;
     }
 
-    /* List Styling for Modules */
+    /* List Styling */
     .education-overlay ul {
         list-style-type: disc;
         margin: 0;
@@ -308,31 +278,6 @@
         margin: 5px 0;
     }
 </style>
-
-
-<style>
-    /* Hover effect for cards */
-    .education-card {
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .education-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Centered logo inside the card */
-    .card-body img {
-        max-height: 80px;
-        margin: 0 auto 20px auto;
-    }
-
-    /* Buttons with icons */
-    .btn i {
-        margin-right: 5px;
-    }
-</style>
-
     
 <!-- Projects Section -->
 <section id="projects" class="py-5">
