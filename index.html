@@ -50,11 +50,25 @@
         }
 
         .project-card {
-            transition: transform 0.3s;
+            border: none;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card .card-body {
+            text-align: center;
+        }
+
+        .project-card h5 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
         /* About Me Section */
@@ -97,11 +111,11 @@
                 <div class="col-md-4">
                     <div class="card project-card shadow">
                         <div class="card-body">
-                            <h5 class="card-title">Grammatical Error Correction Model</h5>
+                            <h5 class="card-title">GEC: gt5</h5>
                             <p class="card-text">
                                 Developed an optimized NLP model using Google T5, achieving an F<sub>0.5</sub> token-based score of 68.86% on the cLang-8 dataset and 56.33% on CoNLL-2014. Delivered a highly efficient tool for English grammatical error correction.
                             </p>
-                            <p><strong>Duration:</strong> Jan 2024 – Aug 2024</p>
+                            <a href="https://github.com/Shiv716/gt5-GEC_T5" class="btn btn-primary">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +128,7 @@
                             <p class="card-text">
                                 Led a team to build a curve-fitting algorithm for bot behavior data, improving malicious bot detection accuracy by 5%. Achieved monthly savings of £8,000 for clients through enhanced detection techniques.
                             </p>
-                            <p><strong>Duration:</strong> Aug 2023 – Sept 2023</p>
+                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary">GitHub Repository</a>
                         </div>
                     </div>
                 </div>
@@ -123,12 +137,12 @@
                 <div class="col-md-4">
                     <div class="card project-card shadow">
                         <div class="card-body">
-                            <h5 class="card-title">Drone Software with Object Detection</h5>
+                            <h5 class="card-title">Recon_Bird</h5>
                             <p class="card-text">
                                 Built Python-based UI software with TensorFlow and OpenCV, enabling drones to perform real-time object detection in hazardous environments. Enhanced safety and efficiency in industries, integrated material flaw detection.
                             </p>
-                            <p><a href="https://tinyurl.com/Recon-Bird" target="_blank">Watch Reel</a></p>
-                            <p><strong>Duration:</strong> Sept 2022 – May 2023</p>
+                            <a href="https://github.com/Shiv716/CurveFit_Veracity_Internship" class="btn btn-primary">GitHub Repository</a>
+                            <a href="https://tinyurl.com/Recon-Bird" class="btn btn-secondary">Watch Reel</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +168,7 @@
             <h2>Contact</h2>
             <p>Email: <a href="mailto:shivang@example.com">shivang@example.com</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/shivangchaudhary">linkedin.com/in/shivangchaudhary</a></p>
-            <p>GitHub: <a href="https://github.com/shivangchaudhary">github.com/shivangchaudhary</a></p>
+            <p>GitHub: <a href="https://github.com/Shiv716">github.com/Shiv716</a></p>
         </div>
     </section>
 </body>
