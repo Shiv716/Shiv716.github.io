@@ -173,7 +173,7 @@
             <div class="col-md-6">
                 <div class="card shadow h-100 position-relative" style="min-height: 340px;">
                     <!-- University Logo -->
-                    <img src="images/kings.png" alt="" class="card-img-top mx-auto p-0" style="height: 150px; width: auto; max-width: 150px; object-fit: contain; 
+                    <img src="images/kings.png" alt="" class="card-img-top mx-auto p-3 logo-image" style="height: 150px; width: auto; max-width: 150px; object-fit: contain; 
                         margin-top: 15px; margin-bottom: 20px; border: none; box-shadow: none;">
                     <!-- Card Body -->
                     <div class="card-body text-center pt-3">
@@ -198,7 +198,7 @@
             <div class="col-md-6">
                 <div class="card shadow h-100 position-relative" style="min-height: 340px;">
                     <!-- University Logo -->
-                    <img src="images/Hudds.png" alt="" class="card-img-top mx-auto p-0" style="height: 130px; width: auto; max-width: 150px; object-fit: contain;
+                    <img src="images/Hudds.png" alt="" class="card-img-top mx-auto p-3 logo-image" style="height: 130px; width: auto; max-width: 150px; object-fit: contain;
                         margin-top: 25px; margin-bottom: 15px; border: none; box-shadow: none;">
                     <!-- Card Body -->
                     <div class="card-body text-center pt-3">
@@ -241,10 +241,36 @@
         border-bottom: 1px solid #ddd;
     }
 
-    /* Add Space Between Logo and Text */
-    .card-body {
-        padding-top: 30px; /* Space between logo and text */
+        /* Consistent Logo Styling */
+    .logo-image {
+        height: 140px; /* Standardized height */
+        width: auto; /* Maintain aspect ratio */
+        max-width: 150px;
+        object-fit: contain;
+        margin-top: 20px;
+        margin-bottom: 20px; /* Consistent vertical spacing */
     }
+    
+    /* Consistent Text Styling */
+    .card-body {
+        padding-top: 20px; /* Adjust padding for spacing */
+    }
+    
+    .card-title {
+        font-size: 1.5em;
+        margin-bottom: 10px; /* Consistent gap below title */
+    }
+    
+    .card-text {
+        font-size: 1.2em;
+        margin-bottom: 10px; /* Consistent spacing for paragraphs */
+    }
+    
+    .text-muted {
+        font-size: 1.1em;
+        margin-top: 5px; /* Consistent spacing for muted text */
+    }
+
 
     /* Overlay Styling */
     .education-overlay {
@@ -357,7 +383,7 @@
         <!-- Second Row: Virtual Enigma Machine -->
         <div class="row g-4 justify-content-center mt-3">
             <div class="col-md-4">
-                <div class="card project-card shadow h-100 position-relative" style="min-height: 295px;">
+                <div class="card project-card shadow h-100 position-relative" style="min-height: 300px;">
                     <!-- Default State: Image -->
                     <img src="images/EngimaClass.png" class="img-fluid project-image">
 
