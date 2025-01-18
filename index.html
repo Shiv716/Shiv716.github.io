@@ -355,7 +355,7 @@
         </div>
 
         <!-- Second Row: Virtual Enigma Machine -->
-        <div class="row g-4 justify-content-center mt-5">
+        <div class="row g-4 justify-content-center mt-4">
             <div class="col-md-4">
                 <div class="card project-card shadow h-100 position-relative">
                     <!-- Default State: Image -->
@@ -417,6 +417,11 @@
         overflow: hidden;
         position: relative;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 400px; /* Uniform height */
+        width: 100%; /* Ensures responsiveness */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .project-card:hover {
@@ -427,7 +432,7 @@
     /* Default Image State */
     .project-image {
         width: 100%;
-        height: 100%;
+        height: 50%; /* Adjust height for uniformity */
         object-fit: cover;
         display: block;
         transition: opacity 0.3s ease;
@@ -436,10 +441,10 @@
     /* Overlay Details - Initially Hidden */
     .overlay {
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 50%;
         background-color: rgba(0, 0, 0, 0.85); /* Dark background for contrast */
         color: white;
         opacity: 0;
@@ -462,7 +467,13 @@
     .project-card:hover .project-image {
         opacity: 0;
     }
+
+    /* Ensure uniform card height */
+    .col-md-4 {
+        display: flex;
+    }
 </style>
+
 
 
     <!-- About Me Section -->
