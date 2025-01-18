@@ -266,13 +266,14 @@
     .card:nth-of-type(2) .card-body {
         padding-top: 70px; /* Additional space between logo and text */
     }
-
+/*bottom: 20px; /* Consistent bottom spacing 
+        left: 50%;
+        transform: translateX(-50%); /* Center the button horizontally */ 
+    
     /* Button in Overlay */
     .education-overlay .btn {
-        position: absolute;
-        bottom: 20px; /* Consistent bottom spacing */
-        left: 50%;
-        transform: translateX(-50%); /* Center the button horizontally */
+        position: static;
+        
         font-size: 16px; /* Ensure font size consistency */
         padding: 8px 20px; /* Standard padding */
         border-radius: 5px; /* Standard border-radius */
@@ -284,8 +285,9 @@
     /* Button Hover Effect */
     .education-overlay .btn:hover {
         background-color: #0056b3; /* Darker blue on hover */
-        transform: scale(1.05) translateX(-48%); /* Maintaining alignment */
+        transform: scale(1.05); /* Maintaining alignment */
     }
+    /* translateX(-48%)*/
 
     /* Consistent Font and Layout for Overlay List */
     .education-overlay ul,
@@ -318,9 +320,11 @@
         opacity: 1;
     }
 
-    .button-container a {
-    display: inline-block; /* Ensures proper display */
-    margin-bottom: 10px;   /* Adds spacing between buttons */
+    .education-overlay .button-container a {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+    gap: 10px; /* Add spacing between buttons */
     }
 
 </style>
