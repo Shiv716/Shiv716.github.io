@@ -190,7 +190,7 @@
                             <li>Deep Learning</li>
                             <li>Computer Vision</li>
                         </ul>
-                        <a href="path/to/research-paper.pdf" target="_blank" class="btn btn-primary mt-3">Research Paper</a>
+                        <a href="path/to/research-paper.pdf" target="_blank" class="btn btn-primary">Research Paper</a>
                     </div>
                 </div>
             </div>
@@ -216,7 +216,7 @@
                             <li>Cloud Computing</li>
                             <li>Database Management</li>
                         </ul>
-                        <a href="path/to/research-paper.pdf" target="_blank" class="btn btn-primary mt-3">Project Paper</a>
+                        <a href="path/to/research-paper.pdf" target="_blank" class="btn btn-primary">Project Paper</a>
                     </div>
                 </div>
             </div>
@@ -248,40 +248,42 @@
         padding-top: 50px; /* Space between logo and text */
     }
 
-    /* Overlay Styling */
-    .education-overlay {
+    /* Button in Overlay */
+    .education-overlay .btn {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+        bottom: 20px; /* Consistent bottom spacing */
+        left: 50%;
+        transform: translateX(-50%); /* Center the button horizontally */
+        font-size: 16px; /* Ensure font size consistency */
+        padding: 8px 20px; /* Standard padding */
+        border-radius: 5px; /* Standard border-radius */
+    }
+
+    
+    /* Default Mode Styling */
+    .education-overlay .btn {
+        background-color: #007bff; /* Consistent blue */
         color: white;
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        transition: opacity 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
-    .card:hover .education-overlay {
-        opacity: 1;
+    
+    /* Hover Mode Styling */
+    .education-overlay .btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        transform: scale(1.05); /* Slight zoom effect */
     }
-
-    /* List Styling */
-    .education-overlay ul {
-        list-style-type: disc;
-        margin: 0;
-        padding: 0;
-    }
-
+    
+    /* Consistent Font and Layout for Both Cards */
+    .education-overlay ul,
     .education-overlay li {
-        font-size: 16px; /* Match button font size */
-        margin: 5px 0;   /* Space between bullet points */
-        line-height: 1.5; /* Enhance readability */
+        font-size: 16px; /* Same font size as button */
+        margin: 5px 0;
+        line-height: 1.5;
+        text-align: center; /* Center-align text for uniformity */
     }
+    .education-overlay {
+    padding: 20px; /* Same padding for all overlays */
+}
 </style>
 
 
