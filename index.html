@@ -243,21 +243,19 @@
         border-bottom: 1px solid #ddd;
     }
 
-    /* Add Space Between Logo and Text */
+    /* General Spacing Between Logo and Text */
     .card-body {
         padding-top: 50px; /* Space between logo and text */
     }
 
-        /* Adjust logo spacing specifically for the second card */
+    /* Adjust Logo and Text Spacing for Second Card Specifically */
     .card:nth-of-type(2) .card-img-top {
         margin-bottom: 30px; /* Increase space below the logo */
     }
     
-    /* Alternatively, adjust the spacing above the text */
     .card:nth-of-type(2) .card-body {
-        padding-top: 70px; /* Increase space between the logo and text */
+        padding-top: 70px; /* Additional space between logo and text */
     }
-
 
     /* Button in Overlay */
     .education-overlay .btn {
@@ -268,34 +266,49 @@
         font-size: 16px; /* Ensure font size consistency */
         padding: 8px 20px; /* Standard padding */
         border-radius: 5px; /* Standard border-radius */
-    }
-
-    
-    /* Default Mode Styling */
-    .education-overlay .btn {
-        background-color: #007bff; /* Consistent blue */
+        background-color: #007bff; /* Default button background */
         color: white;
         transition: background-color 0.3s ease, transform 0.2s ease;
     }
-    
-    /* Hover Mode Styling */
+
+    /* Button Hover Effect */
     .education-overlay .btn:hover {
         background-color: #0056b3; /* Darker blue on hover */
         transform: scale(1.05); /* Slight zoom effect */
     }
-    
-    /* Consistent Font and Layout for Both Cards */
+
+    /* Consistent Font and Layout for Overlay List */
     .education-overlay ul,
     .education-overlay li {
-        font-size: 16px; /* Same font size as button */
-        margin: 5px 0;
-        line-height: 1.5;
+        font-size: 16px; /* Match button font size */
+        margin: 5px 0;   /* Space between bullet points */
+        line-height: 1.5; /* Enhance readability */
         text-align: center; /* Center-align text for uniformity */
     }
+
+    /* Overlay Styling */
     .education-overlay {
-    padding: 20px; /* Same padding for all overlays */
-}
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+        color: white;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; /* Consistent padding */
+        transition: opacity 0.3s ease;
+    }
+
+    .card:hover .education-overlay {
+        opacity: 1;
+    }
 </style>
+
 
 
     
