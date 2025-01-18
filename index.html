@@ -549,16 +549,13 @@
             <!-- Updated Heading with Logos -->
         <div class="d-flex align-items-center justify-content-center mb-4">
 
-            <!-- Left Logo -->
-            <img src="images/jpmc.png" alt="Logo 1" style="width: 40px; height: 40px; margin-right: 10px;">
-
-             <!-- Left Logo -->
-            <img src="logo1.png" alt="Logo 1" style="width: 40px; height: 40px; margin-right: 10px;">
+            <img src="images/jpmc.png" alt="Logo 1" class="about-logo about-logo-left">
+            <img src="logo1.png" alt="Logo 1" class="about-logo about-logo-left">
             
             <h2 class="text-center mb-4">About Me</h2>
 
             <!-- Right Logo -->
-            <img src="images/gs.png" alt="Logo 2" style="width: 40px; height: 40px; margin-left: 10px;">
+            <img src="images/gs.png" alt="Logo 2" class="about-logo about-logo-right">
         </div>
             
             <p>
@@ -579,6 +576,21 @@
             </p>
         </div>
     </section>
+    <style>
+    .about-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-logo-left {
+        margin-right: 15px;
+    }
+
+    .about-logo-right {
+        margin-left: 15px;
+    }
+</style>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
