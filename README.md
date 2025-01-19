@@ -5,3 +5,7 @@
 
 # Website Portfolio
 - [Shivang Chaudhary](https://shiv716.github.io/)
+
+## Tools
+- `HTML`
+- `CSS`
