@@ -117,12 +117,6 @@
         /*------CHANGES FROM HERE--------*/
         @media screen and (max-width: 1024px) { 
     /* Hero Section */
-           
-    /* Increase Height of GT5 and Enigma Machine Cards */
-    .project-card:nth-child(2), /* GT5 Card */
-    .project-card:nth-child(3)  /* Enigma Machine Card */ {
-        min-height: 520px; /* Increase height */
-    }
 
     #hero {
         height: auto;
@@ -230,6 +224,30 @@
 
     .project-card:active .overlay {
         opacity: 1;
+    }
+
+    /* Ensure All Project Cards Have Consistent Size */
+    .project-card {
+        min-height: 520px; /* Set minimum height for uniformity */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Ensure Card Content Stays Centered */
+    .project-card .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    /* Ensure Card Images Scale Properly */
+    .project-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
     /* Disable Hover Effects for Mobile */
