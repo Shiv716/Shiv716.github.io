@@ -114,12 +114,13 @@
             }
         }
 
-        /*CHANGES FROM HERE*/
-        @media screen and (max-width: 768px) {
-            /* Adjust hero section for better mobile fit */
+        /*------CHANGES FROM HERE--------*/
+        @media screen and (max-width: 1024px) { 
+            /* Hero Section */
             #hero {
                 height: auto;
                 padding: 50px 20px;
+                text-align: center;
             }
         
             #hero h1 {
@@ -138,42 +139,77 @@
                 margin: 10px 0;
             }
         
-            /* Ensure proper padding for sections */
+            /* Ensure sections are not touching screen edges */
             section {
                 padding: 40px 15px;
             }
         
-            /* Adjust education and project cards */
+            /* Cards (Education, Projects) */
             .col-md-6, .col-md-4 {
                 width: 100%;
             }
         
-            .card-img-top {
-                height: auto;
-                max-width: 100%;
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
             }
         
-            /* Adjust project overlay text */
+            /* Card Text Adjustments */
+            .card-body {
+                padding: 20px;
+                text-align: center;
+            }
+        
+            .card-title {
+                font-size: 1.4rem;
+            }
+        
+            .card-text {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        
+            /* Card Images */
+            .card-img-top {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        
+            /* Project Overlay Text (Fix Text Overflow) */
             .overlay {
                 font-size: 1rem;
                 padding: 15px;
+                text-align: center;
             }
         
-            /* Adjust about section logos */
+            /* About Me Section Fix */
             .about-logo {
-                width: 40px;
-                height: 40px;
+                width: 45px;
+                height: 45px;
             }
         
-            /* Adjust contact section for better alignment */
+            /* Ensure Logos in About Me are Centered */
+            .d-flex.align-items-center.justify-content-center {
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: center !important;
+            }
+        
+            .about-logo-left, .about-logo-right {
+                margin: 10px;
+            }
+        
+            /* Contact Section */
             #contact p {
                 font-size: 1rem;
             }
         }
-        
-
 
         /* -------------- */
+
+        
     </style>
 </head>
 <body>
