@@ -192,13 +192,23 @@
         text-align: center;
     }
 
-    /* Arrange Logos in About Me Section Above the Text Horizontally */
+    /* Arrange About Me Logos */
     .d-flex.align-items-center.justify-content-center {
         display: flex;
-        flex-wrap: nowrap; /* Prevents vertical stacking */
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 15px; /* Adds space between logos */
-        margin-bottom: 20px; /* Adds spacing below logos */
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* First 3 Logos Above */
+    .d-flex.align-items-center.justify-content-center a:nth-child(-n+3) {
+        order: -1; /* Move first 3 logos above */
+    }
+
+    /* Last 2 Logos Below */
+    .d-flex.align-items-center.justify-content-center a:nth-child(n+4) {
+        order: 1; /* Move last 2 logos below */
     }
 
     .about-logo {
