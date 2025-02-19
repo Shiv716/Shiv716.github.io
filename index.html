@@ -217,46 +217,49 @@
     }
 
     /* Convert Hover Effect to Click Effect for Mobile */
-    .project-card .overlay {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
+.project-card .overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-    .project-card:active .overlay {
+.project-card:active .overlay {
+    opacity: 1;
+}
+
+/* Ensure All Project Cards Have Consistent Size */
+.project-card {
+    min-height: 520px; /* Set minimum height for uniformity */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Prevents image overflow issues */
+}
+
+/* Ensure Card Content Stays Centered */
+.project-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Ensure Card Images Fully Cover the Cards */
+.project-card img {
+    width: 100%;
+    height: 100%; /* Ensures the image covers the full height */
+    object-fit: cover; /* Makes sure the image fully fills the card */
+    display: block;
+}
+
+/* Disable Hover Effects for Mobile */
+@media (hover: none) {
+    .project-card:hover .overlay,
+    .project-card:hover .project-image {
         opacity: 1;
     }
+}
 
-    /* Ensure All Project Cards Have Consistent Size */
-    .project-card {
-        min-height: 520px; /* Set minimum height for uniformity */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    /* Ensure Card Content Stays Centered */
-    .project-card .card-body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-    }
-
-    /* Ensure Card Images Scale Properly */
-    .project-card img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    /* Disable Hover Effects for Mobile */
-    @media (hover: none) {
-        .project-card:hover .overlay,
-        .project-card:hover .project-image {
-            opacity: 1;
-        }
-    }
 
     /* Contact Section */
     #contact p {
