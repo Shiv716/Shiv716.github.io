@@ -192,28 +192,16 @@
         justify-content: center;
         gap: 15px;
         margin-bottom: 20px;
-        flex-direction: column; /* Force logos into separate rows */
-        align-items: center;
     }
 
     /* First 3 Logos Above */
     .d-flex.align-items-center.justify-content-center a:nth-child(-n+3) {
         order: -1; /* Move first 3 logos above */
-        display: inline-block;
     }
 
     /* Last 2 Logos Below */
     .d-flex.align-items-center.justify-content-center a:nth-child(n+4) {
         order: 1; /* Move last 2 logos below */
-        display: inline-block;
-    }
-
-    /* Ensure About Me Heading is Centered Below First Row */
-    #about h2 {
-        order: 0; /* Keep About Me heading between logo rows */
-        text-align: center;
-        width: 100%;
-        margin-top: 10px;
     }
 
     /* Convert Hover Effect to Click Effect for Mobile */
