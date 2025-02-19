@@ -116,96 +116,119 @@
 
         /*------CHANGES FROM HERE--------*/
         @media screen and (max-width: 1024px) { 
-        /* Hero Section */
-        #hero {
-            height: auto;
-            padding: 50px 20px;
-            text-align: center;
-        }
-    
-        #hero h1 {
-            font-size: 2rem;
-        }
-    
-        #hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-    
-        /* Stack buttons vertically */
-        #hero .btn {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-        }
-    
-        /* Ensure sections are not touching screen edges */
-        section {
-            padding: 40px 15px;
-        }
-    
-        /* Cards (Education, Projects) */
-        .col-md-6, .col-md-4 {
-            width: 100%;
-        }
-    
-        .card {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    
-        /* Card Text Adjustments */
-        .card-body {
-            padding: 20px;
-            text-align: center;
-        }
-    
-        .card-title {
-            font-size: 1.4rem;
-        }
-    
-        .card-text {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-    
-        /* Card Images */
-        .card-img-top {
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            object-fit: contain;
-        }
-    
-        /* Project Overlay Text (Fix Text Overflow) */
-        .overlay {
-            font-size: 1rem;
-            padding: 15px;
-            text-align: center;
-        }
-    
-        /* About Me Section Fix */
-        .about-logo {
-            width: 45px;
-            height: 45px;
-        }
-    
-        /* Ensure Logos in About Me are Centered */
-        .d-flex.align-items-center.justify-content-center {
-            flex-wrap: wrap;
-            text-align: center;
-            justify-content: center !important;
-        }
-    
-        .about-logo-left, .about-logo-right {
-            margin: 10px;
-        }
-    
-        /* Contact Section */
-        #contact p {
-            font-size: 1rem;
+    /* Hero Section */
+    #hero {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Center Buttons Properly */
+    #hero .btn {
+        display: block;
+        width: 80%; /* Ensures all buttons are aligned in center */
+        max-width: 250px; /* Limits button width */
+        margin: 10px auto; /* Centers buttons */
+    }
+
+    /* Ensure sections are not touching screen edges */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Cards (Education, Projects) */
+    .col-md-6, .col-md-4 {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Card Text Adjustments */
+    .card-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* Card Images */
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /* Project Overlay Text (Fix Text Overflow) */
+    .overlay {
+        font-size: 1rem;
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Arrange Logos in About Me Section Above the Text Horizontally */
+    .d-flex.align-items-center.justify-content-center {
+        display: flex;
+        flex-wrap: nowrap; /* Prevents vertical stacking */
+        justify-content: center;
+        gap: 15px; /* Adds space between logos */
+        margin-bottom: 20px; /* Adds spacing below logos */
+    }
+
+    .about-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Ensure About Me Text Appears Below Logos */
+    #about h2 {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Convert Hover Effect to Click Effect for Mobile */
+    .project-card .overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .project-card:active .overlay {
+        opacity: 1;
+    }
+
+    /* Disable Hover Effects for Mobile */
+    @media (hover: none) {
+        .project-card:hover .overlay,
+        .project-card:hover .project-image {
+            opacity: 1;
         }
     }
+
+    /* Contact Section */
+    #contact p {
+        font-size: 1rem;
+    }
+}
+
 
 
 
