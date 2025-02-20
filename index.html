@@ -202,7 +202,7 @@
         text-align: center;
     }
 
-    /* Arrange logos in two rows */
+   /* Arrange logos in two rows */
 .about-me-logos {
     display: flex;
     flex-wrap: wrap;
@@ -210,18 +210,19 @@
     gap: 15px;
 }
 
-/* First 3 logos in one row */
-.about-me-logos a:nth-child(-n+3) {
+/* First 4 logos stay in one row */
+.about-me-logos a:nth-child(-n+4) {
     order: -1;
     flex: 1 1 auto; /* Ensure even spacing */
 }
 
-/* Last 2 logos in a new row */
-.about-me-logos a:nth-child(n+4) {
+/* Last logo moves below */
+.about-me-logos a:last-child {
     order: 1;
-    flex: 1 1 auto; /* Ensure even spacing */
+    flex: 1 1 auto;
     margin-top: 15px; /* Add spacing between the two rows */
 }
+
 
    /* Disable Hover Effects for Mobile and Enable Click */
 @media (hover: none) {
