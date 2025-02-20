@@ -793,7 +793,7 @@
         </div>
     </section>
 
-    <!-- Mobile-friendly functionality for all section cards -->
+    <!-- Mobile-friendly functionality for section cards -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const educationCards = document.querySelectorAll(".education-card");
@@ -812,42 +812,6 @@
                 });
             });
         });
-
-        
-        document.addEventListener("DOMContentLoaded", function () {
-    const projectCards = document.querySelectorAll(".project-card");
-
-    projectCards.forEach(card => {
-        const overlay = card.querySelector(".overlay");
-
-        // Ensure overlay appears when clicking the card
-        card.addEventListener("click", function (event) {
-            // Prevent accidental re-toggle when clicking inside overlay
-            if (!event.target.classList.contains("project-card")) return;
-
-            // Hide all other overlays
-            projectCards.forEach(c => {
-                if (c !== card) {
-                    c.querySelector(".overlay").style.opacity = "0";
-                }
-            });
-
-            // Toggle overlay visibility
-            overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
-        });
-
-        // Ensure buttons inside the overlay are fully functional
-        overlay.querySelectorAll("a").forEach(button => {
-            button.addEventListener("click", function (event) {
-                event.stopPropagation(); // Prevent closing the overlay
-                window.location.href = button.href; // Ensure navigation works
-            });
-        });
-    });
-});
-
-
-
     </script>
 </body>
 </html>
