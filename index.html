@@ -205,26 +205,23 @@
         text-align: center;
     }
 
-  /* Arrange logos in two rows */
-.about-me-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* First 3 logos in one row */
-.about-me-logos a:nth-child(-n+3) {
-    order: -1;
-    flex: 1 1 auto; /* Ensure even spacing */
-}
-
-/* Last 2 logos in a new row */
-.about-me-logos a:nth-child(n+4) {
-    order: 1;
-    flex: 1 1 auto; /* Ensure even spacing */
-    margin-top: 15px; /* Add spacing between the two rows */
-}
+      .d-flex.align-items-center.justify-content-center {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        /* First 3 Logos Above */
+        .d-flex.align-items-center.justify-content-center a:nth-child(-n+3) {
+            order: -1; /* Move first 3 logos above */
+        }
+        
+        /* Last 2 Logos Below */
+        .d-flex.align-items-center.justify-content-center a:nth-child(n+4) {
+            order: 1; /* Move last 2 logos below */
+        }
 
 
 
@@ -237,9 +234,8 @@
     }
 
     .project-card:active .overlay,
-    .project-card:focus-within .overlay,
-    .education-card:active .overlay,
-    .education-card:focus-within .overlay { 
+    .project-card:focus-within .overlay
+    { 
         opacity: 1; /* Show overlay when tapped or focused */
         pointer-events: auto;
     }
@@ -275,8 +271,7 @@
 /* Disable Hover Effects for Mobile */
 @media (hover: none) {
     .project-card:hover .overlay,
-    .project-card:hover .project-image,
-    .education-card:hover .overlay {
+    .project-card:hover .project-image{
         opacity: 1;
     }
 }
