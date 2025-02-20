@@ -142,20 +142,17 @@
     }
 
             /* Ensure Click Instead of Hover for Education Cards on Small Screens */
-    @media (hover: none) {
-    .education-card .overlay {
-        opacity: 0 !important;
-        transition: none !important;
-        pointer-events: none !important;
-    }
-
-    .education-card:active .overlay,
-    .education-card:focus-within .overlay,
-    .education-card:hover .overlay {
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
+   /* Disable hover effects */
+.education-card:hover .education-overlay {
+    opacity: 0;
 }
+
+/* Show overlay when clicked */
+.education-card.active .education-overlay {
+    opacity: 1 !important;
+    pointer-events: auto;
+}
+
 
 
 
@@ -817,6 +814,27 @@
             <p>GitHub: <a href="https://github.com/Shiv716">Shiv716</a></p>
         </div>
     </section>
+
+    <!-- Mobile-friendly functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const educationCards = document.querySelectorAll(".education-card");
+    
+            educationCards.forEach(card => {
+                card.addEventListener("click", function() {
+                    // Remove active class from other cards to prevent multiple being open
+                    educationCards.forEach(c => {
+                        if (c !== card) {
+                            c.classList.remove("active");
+                        }
+                    });
+    
+                    // Toggle active class on the clicked card
+                    card.classList.toggle("active");
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
