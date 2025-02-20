@@ -815,38 +815,37 @@
 
         
         document.addEventListener("DOMContentLoaded", function () {
-            const projectCards = document.querySelectorAll(".project-card");
-        
-            projectCards.forEach(card => {
-                const overlay = card.querySelector(".overlay");
-        
-                // Ensure the overlay appears when clicking the card
-                card.addEventListener("click", function (event) {
-                    // If clicking on a button inside the overlay, do NOT toggle visibility
-                    if (event.target.tagName === "A") {
-                        return; // Allow normal button navigation
-                    }
-        
-                    // Hide all other overlays
-                    projectCards.forEach(c => {
-                        if (c !== card) {
-                            c.classList.remove("active");
-                            c.querySelector(".overlay").style.opacity = "0";
-                        }
-                    });
-        
-                    // Toggle overlay visibility on click
-                    overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
-                });
-        
-                // Ensure buttons inside the overlay are fully functional
-                overlay.querySelectorAll("a").forEach(button => {
-                    button.addEventListener("click", function (event) {
-                        event.stopPropagation(); // Prevent the card click event from interfering
-                    });
-                });
+    const projectCards = document.querySelectorAll(".project-card");
+
+    projectCards.forEach(card => {
+        const overlay = card.querySelector(".overlay");
+
+        // Ensure overlay appears when clicking the card
+        card.addEventListener("click", function (event) {
+            // Prevent accidental re-toggle when clicking inside overlay
+            if (!event.target.classList.contains("project-card")) return;
+
+            // Hide all other overlays
+            projectCards.forEach(c => {
+                if (c !== card) {
+                    c.querySelector(".overlay").style.opacity = "0";
+                }
+            });
+
+            // Toggle overlay visibility
+            overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
+        });
+
+        // Ensure buttons inside the overlay are fully functional
+        overlay.querySelectorAll("a").forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevent closing the overlay
+                window.location.href = button.href; // Ensure navigation works
             });
         });
+    });
+});
+
 
 
     </script>
