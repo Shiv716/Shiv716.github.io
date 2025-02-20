@@ -207,15 +207,21 @@
     margin-top: 15px; /* Add spacing between the two rows */
 }
 
-    /* Convert Hover Effect to Click Effect for Mobile */
-.project-card .overlay {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+   /* Disable Hover Effects for Mobile and Enable Click */
+@media (hover: none) {
+    .project-card .overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none; /* Prevent accidental hover interaction */
+    }
+
+    .project-card:active .overlay,
+    .project-card:focus-within .overlay { 
+        opacity: 1; /* Show overlay when tapped or focused */
+        pointer-events: auto;
+    }
 }
 
-.project-card:active .overlay {
-    opacity: 1;
-}
 
 /* Ensure All Project Cards Have Consistent Size */
 .project-card {
