@@ -5,8 +5,6 @@
 
 # Website Portfolio
 - [Shivang Chaudhary](https://shiv716.github.io/)
-- <a href="https://shiv716.github.io/" target="_blank" rel="noopener noreferrer">Shivang Chaudhary</a>
-
 
 ## Tools
 - `HTML`
