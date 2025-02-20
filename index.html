@@ -222,10 +222,16 @@
                 }
             
                 .project-card:active .overlay,
-                .project-card:focus-within .overlay
+                /*.project-card:focus-within .overlay*/
                 { 
                     opacity: 1 !important; /* Show overlay when tapped or focused */
                     pointer-events: auto;
+                }
+
+                /* Ensure buttons inside overlay are clickable */
+                .project-card .overlay a,
+                .project-card .overlay .btn {
+                    pointer-events: auto !important;
                 }
             }
         
@@ -812,29 +818,30 @@
                 });
             });
         });
-
+        
 
         document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', function (event) {
-                // Prevent event from bubbling up when clicking inside buttons or links
+                // Prevent overlay from closing when clicking buttons
                 if (event.target.tagName === 'A' || event.target.classList.contains('btn')) {
-                    return;
+                    event.stopPropagation();
+                    return; // Allow button clicks to work
                 }
     
-                // Remove 'active' class from other project cards to allow only one open at a time
+                // Close other active project cards
                 document.querySelectorAll('.project-card').forEach(c => {
                     if (c !== card) {
                         c.classList.remove('active');
                     }
                 });
     
-                // Toggle the 'active' class on clicked card
+                // Toggle the clicked card
                 this.classList.toggle('active');
             });
         });
     
-        // Close overlay when clicking outside of project cards
+        // Close overlay if user clicks outside any card
         document.addEventListener('click', function (event) {
             if (!event.target.closest('.project-card')) {
                 document.querySelectorAll('.project-card').forEach(card => {
