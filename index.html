@@ -793,7 +793,7 @@
         </div>
     </section>
 
-    <!-- Mobile-friendly functionality for 'Education Section' cards -->
+    <!-- Mobile-friendly functionality for all section cards -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const educationCards = document.querySelectorAll(".education-card");
@@ -812,6 +812,32 @@
                 });
             });
         });
+
+        
+        document.addEventListener("DOMContentLoaded", function () {
+        const projectCards = document.querySelectorAll(".project-card");
+    
+        projectCards.forEach(card => {
+            card.addEventListener("click", function () {
+                // Remove active class from other cards
+                projectCards.forEach(c => {
+                    if (c !== card) {
+                        c.classList.remove("active");
+                        c.querySelector(".overlay").style.opacity = "0";
+                    }
+                });
+    
+                    // Toggle the overlay on the clicked card
+                    const overlay = card.querySelector(".overlay");
+                    if (overlay.style.opacity === "1") {
+                        overlay.style.opacity = "0";
+                    } else {
+                        overlay.style.opacity = "1";
+                    }
+                });
+            });
+        });
+
     </script>
 </body>
 </html>
