@@ -141,6 +141,22 @@
         margin: 10px auto; /* Centers buttons */
     }
 
+            /* Disable Hover Effects for Mobile and Enable Click for Education Cards */
+@media (hover: none) {
+    .education-card .overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none; /* Prevent accidental hover interaction */
+    }
+
+    .education-card:active .overlay,
+    .education-card:focus-within .overlay { 
+        opacity: 1; /* Show overlay when tapped or focused */
+        pointer-events: auto;
+    }
+}
+
+
     /* Ensure sections are not touching screen edges */
     section {
         padding: 40px 15px;
