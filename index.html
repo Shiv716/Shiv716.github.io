@@ -218,13 +218,13 @@
                 .project-card .overlay {
                     opacity: 0;
                     transition: opacity 0.3s ease;
-                    pointer-events: auto; /* Prevent accidental hover interaction */
+                    pointer-events: none; /* Prevent accidental hover interaction */
                 }
             
                 .project-card:active .overlay,
                 .project-card:focus-within .overlay
                 { 
-                    opacity: 1; /* Show overlay when tapped or focused */
+                    opacity: 1 !important; /* Show overlay when tapped or focused */
                     pointer-events: auto;
                 }
             }
@@ -812,6 +812,38 @@
                 });
             });
         });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function (event) {
+                // Prevent event from bubbling up when clicking inside buttons or links
+                if (event.target.tagName === 'A' || event.target.classList.contains('btn')) {
+                    return;
+                }
+    
+                // Remove 'active' class from other project cards to allow only one open at a time
+                document.querySelectorAll('.project-card').forEach(c => {
+                    if (c !== card) {
+                        c.classList.remove('active');
+                    }
+                });
+    
+                // Toggle the 'active' class on clicked card
+                this.classList.toggle('active');
+            });
+        });
+    
+        // Close overlay when clicking outside of project cards
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.project-card')) {
+                document.querySelectorAll('.project-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+            }
+        });
+    });
+
     </script>
 </body>
 </html>
