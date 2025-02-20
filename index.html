@@ -815,28 +815,39 @@
 
         
         document.addEventListener("DOMContentLoaded", function () {
-        const projectCards = document.querySelectorAll(".project-card");
-    
-        projectCards.forEach(card => {
-            card.addEventListener("click", function () {
-                // Remove active class from other cards
-                projectCards.forEach(c => {
-                    if (c !== card) {
-                        c.classList.remove("active");
-                        c.querySelector(".overlay").style.opacity = "0";
+            const projectCards = document.querySelectorAll(".project-card");
+        
+            projectCards.forEach(card => {
+                const overlay = card.querySelector(".overlay");
+        
+                // Ensure the overlay appears when clicking the card
+                card.addEventListener("click", function (event) {
+                    // If clicking on a button inside the overlay, do NOT toggle visibility
+                    if (event.target.tagName === "A") {
+                        return; // Allow normal button navigation
                     }
+        
+                    // Hide all other overlays
+                    projectCards.forEach(c => {
+                        if (c !== card) {
+                            c.classList.remove("active");
+                            c.querySelector(".overlay").style.opacity = "0";
+                        }
+                    });
+        
+                    // Toggle overlay visibility on click
+                    overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
                 });
-    
-                    // Toggle the overlay on the clicked card
-                    const overlay = card.querySelector(".overlay");
-                    if (overlay.style.opacity === "1") {
-                        overlay.style.opacity = "0";
-                    } else {
-                        overlay.style.opacity = "1";
-                    }
+        
+                // Ensure buttons inside the overlay are fully functional
+                overlay.querySelectorAll("a").forEach(button => {
+                    button.addEventListener("click", function (event) {
+                        event.stopPropagation(); // Prevent the card click event from interfering
+                    });
                 });
             });
         });
+
 
     </script>
 </body>
