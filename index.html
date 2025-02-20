@@ -114,182 +114,171 @@
             }
         }
 
-        /*------CHANGES FROM HERE--------*/
+        /*------Mobile-friendly Functionality--------*/
         @media screen and (max-width: 1024px) { 
-    /* Hero Section */
-
-    #hero {
-        height: auto;
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-    }
-
-    /* Center Buttons Properly */
-    #hero .btn {
-        display: block;
-        width: 80%; /* Ensures all buttons are aligned in center */
-        max-width: 250px; /* Limits button width */
-        margin: 10px auto; /* Centers buttons */
-    }
-
-            /* Ensure Click Instead of Hover for Education Cards on Small Screens */
-   /* Disable hover effects */
-.education-card:hover .education-overlay {
-    opacity: 0;
-}
-
-/* Show overlay when clicked */
-.education-card.active .education-overlay {
-    opacity: 1 !important;
-    pointer-events: auto;
-}
-
-
-
-
-
-    /* Ensure sections are not touching screen edges */
-    section {
-        padding: 40px 15px;
-    }
-
-    /* Cards (Education, Projects) */
-    .col-md-6, .col-md-4 {
-        width: 100%;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Card Text Adjustments */
-    .card-body {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .card-title {
-        font-size: 1.4rem;
-    }
-
-    .card-text {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    /* Card Images */
-    .card-img-top {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        object-fit: contain;
-    }
-
-    /* Project Overlay Text (Fix Text Overflow) */
-    .overlay {
-        font-size: 1rem;
-        padding: 15px;
-        text-align: center;
-    }
-
-      .d-flex.align-items-center.justify-content-center {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+            /* Hero Section */
         
-        /* First 3 Logos Above */
-        .d-flex.align-items-center.justify-content-center a:nth-child(-n+3) {
-            order: -1; /* Move first 3 logos above */
-        }
+            #hero {
+                height: auto;
+                padding: 50px 20px;
+                text-align: center;
+            }
         
-        /* Last 2 Logos Below */
-        .d-flex.align-items-center.justify-content-center a:nth-child(n+4) {
-            order: 1; /* Move last 2 logos below */
-        }
-
-
-
-   /* Disable Hover Effects for Mobile and Enable Click */
-@media (hover: none) {
-    .project-card .overlay {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none; /* Prevent accidental hover interaction */
-    }
-
-    .project-card:active .overlay,
-    .project-card:focus-within .overlay
-    { 
-        opacity: 1; /* Show overlay when tapped or focused */
-        pointer-events: auto;
-    }
-}
-
-
-/* Ensure All Project Cards Have Consistent Size */
-.project-card {
-    min-height: 520px; /* Set minimum height for uniformity */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden; /* Prevents image overflow issues */
-}
-
-/* Ensure Card Content Stays Centered */
-.project-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
-
-/* Ensure Card Images Fully Cover the Cards */
-.project-card img {
-    width: 100%;
-    height: 100%; /* Ensures the image covers the full height */
-    object-fit: cover; /* Makes sure the image fully fills the card */
-    display: block;
-}
-
-/* Disable Hover Effects for Mobile */
-@media (hover: none) {
-    .project-card:hover .overlay,
-    .project-card:hover .project-image{
-        opacity: 1;
-    }
-}
-
+            #hero h1 {
+                font-size: 2rem;
+            }
+        
+            #hero p {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+        
+            /* Center Buttons Properly */
+            #hero .btn {
+                display: block;
+                width: 80%; /* Ensures all buttons are aligned in center */
+                max-width: 250px; /* Limits button width */
+                margin: 10px auto; /* Centers buttons */
+            }
+        
+            /* Disabling hover effects */
+            .education-card:hover .education-overlay {
+                opacity: 0;
+            }
+            
+            /* Showing overlay when clicked */
+            .education-card.active .education-overlay {
+                opacity: 1 !important;
+                pointer-events: auto;
+            }
+        
+            /* Ensure sections are not touching screen edges */
+            section {
+                padding: 40px 15px;
+            }
+        
+            /* Cards (Education, Projects) */
+            .col-md-6, .col-md-4 {
+                width: 100%;
+            }
+        
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        
+            /* Card Text Adjustments */
+            .card-body {
+                padding: 20px;
+                text-align: center;
+            }
+        
+            .card-title {
+                font-size: 1.4rem;
+            }
+        
+            .card-text {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        
+            /* Card Images */
+            .card-img-top {
+                width: 100%;
+                height: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
+        
+            /* Project Overlay Text (Fix Text Overflow) */
+            .overlay {
+                font-size: 1rem;
+                padding: 15px;
+                text-align: center;
+            }
+        
+            .d-flex.align-items-center.justify-content-center {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-bottom: 20px;
+            }
+                
+            /* First 4 Logos Above */
+            .d-flex.align-items-center.justify-content-center a:nth-child(-n+4) {
+                order: -1; /* Move first 4 logos above */
+            }
+            
+            /* Last 1 Logo Below */
+            .d-flex.align-items-center.justify-content-center a:nth-child(n+5) {
+                order: 1; /* Move the last logo below */
+            }
+        
+           /* Disable Hover Effects for Mobile and Enable Click */
+            @media (hover: none) {
+                .project-card .overlay {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    pointer-events: none; /* Prevent accidental hover interaction */
+                }
+            
+                .project-card:active .overlay,
+                .project-card:focus-within .overlay
+                { 
+                    opacity: 1; /* Show overlay when tapped or focused */
+                    pointer-events: auto;
+                }
+            }
+        
+        
+            /* Ensuring All Project Cards Have Consistent Size */
+            .project-card {
+                min-height: 520px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden; /* Prevents image overflow issues */
+            }
+            
+            /* Ensuring Card Content Stay Centered */
+            .project-card .card-body {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+            }
+            
+            /* Ensuring Card Images Fully Cover */
+            .project-card img {
+                width: 100%;
+                height: 100%; 
+                object-fit: cover; 
+                display: block;
+            }
+        
+            /* Disabling Hover Effects for Mobile */
+            @media (hover: none) {
+                .project-card:hover .overlay,
+                .project-card:hover .project-image{
+                    opacity: 1;
+                }
+            }
+        
             .row:first-of-type .project-card {
-        min-height: 370px; /* Increase height for better fit */
-    }
-
-
-    /* Contact Section */
-    #contact p {
-        font-size: 1rem;
-    }
-}
-
-
-
+                min-height: 390px; /* Increase height for better fit */
+            }
+        
+        
+            /* Contact Section */
+            #contact p {
+                font-size: 1rem;
+            }
+        }
 
         /* -------------- */
 
-        
     </style>
 </head>
 <body>
@@ -790,19 +779,19 @@
         </div>
     </section>
     <style>
-    .about-logo {
-        width: 60px;
-        height: 60px;
-    }
-
-    .about-logo-left {
-        margin-right: 15px;
-    }
-
-    .about-logo-right {
-        margin-left: 15px;
-    }
-</style>
+        .about-logo {
+            width: 60px;
+            height: 60px;
+        }
+    
+        .about-logo-left {
+            margin-right: 15px;
+        }
+    
+        .about-logo-right {
+            margin-left: 15px;
+        }
+    </style>
 
 
     <!-- Contact Section -->
@@ -815,21 +804,21 @@
         </div>
     </section>
 
-    <!-- Mobile-friendly functionality -->
+    <!-- Mobile-friendly functionality for 'Education Section' cards -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const educationCards = document.querySelectorAll(".education-card");
     
             educationCards.forEach(card => {
                 card.addEventListener("click", function() {
-                    // Remove active class from other cards to prevent multiple being open
+                    
                     educationCards.forEach(c => {
                         if (c !== card) {
                             c.classList.remove("active");
                         }
                     });
     
-                    // Toggle active class on the clicked card
+                    // Toggling active class on the clicked card.
                     card.classList.toggle("active");
                 });
             });
