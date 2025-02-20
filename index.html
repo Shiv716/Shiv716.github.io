@@ -228,13 +228,12 @@
                     pointer-events: auto;
                 }
 
-                /* Ensure buttons inside overlay are clickable */
+                /* Ensuring buttons inside overlay are clickable */
                 .project-card .overlay a,
                 .project-card .overlay .btn {
                     pointer-events: auto !important;
                 }
             }
-        
         
             /* Ensuring All Project Cards Have Consistent Size */
             .project-card {
@@ -801,6 +800,7 @@
 
     <!-- Mobile-friendly functionality for section cards -->
     <script>
+        // For Education-section cards: -
         document.addEventListener("DOMContentLoaded", function() {
             const educationCards = document.querySelectorAll(".education-card");
     
@@ -819,29 +819,29 @@
             });
         });
         
-
+        // For project cards: -
         document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', function (event) {
-                // Prevent overlay from closing when clicking buttons
+                // Preventing overlay from closing when clicking buttons
                 if (event.target.tagName === 'A' || event.target.classList.contains('btn')) {
                     event.stopPropagation();
                     return; // Allow button clicks to work
                 }
     
-                // Close other active project cards
+                // Closing the other active project cards
                 document.querySelectorAll('.project-card').forEach(c => {
                     if (c !== card) {
                         c.classList.remove('active');
                     }
                 });
     
-                // Toggle the clicked card
+                // Toggling the clicked card
                 this.classList.toggle('active');
             });
         });
     
-        // Close overlay if user clicks outside any card
+        // Will close overlay if user clicks outside any card
         document.addEventListener('click', function (event) {
             if (!event.target.closest('.project-card')) {
                 document.querySelectorAll('.project-card').forEach(card => {
@@ -850,7 +850,6 @@
             }
         });
     });
-
     </script>
 </body>
 </html>
