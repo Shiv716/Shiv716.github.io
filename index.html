@@ -170,13 +170,14 @@
     transition: opacity 0.3s ease;
 }
 
-/* Add JavaScript-based Toggle for Click Effect */
 @media (hover: none) {
-    .education-card .overlay.active {
-        opacity: 1;
-        pointer-events: auto;
+    .education-card .overlay {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
     }
 }
+
 
 
 
@@ -256,7 +257,9 @@
     }
 
     .project-card:active .overlay,
-    .project-card:focus-within .overlay { 
+    .project-card:focus-within .overlay,
+    .education-card:active .overlay,
+    .education-card:focus-within .overlay { 
         opacity: 1; /* Show overlay when tapped or focused */
         pointer-events: auto;
     }
@@ -292,7 +295,8 @@
 /* Disable Hover Effects for Mobile */
 @media (hover: none) {
     .project-card:hover .overlay,
-    .project-card:hover .project-image {
+    .project-card:hover .project-image,
+    .education-card:hover .overlay {
         opacity: 1;
     }
 }
@@ -838,22 +842,6 @@
             <p>GitHub: <a href="https://github.com/Shiv716">Shiv716</a></p>
         </div>
     </section>
-
-     <!-- For Mobile-functioning -->
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const educationCards = document.querySelectorAll(".education-card");
-
-    educationCards.forEach(card => {
-        card.addEventListener("click", function() {
-            const overlay = this.querySelector(".overlay");
-            if (overlay) {
-                overlay.classList.toggle("active"); // Toggle visibility on click
-            }
-        });
-    });
-});
-</script>
 
 </body>
 </html>
