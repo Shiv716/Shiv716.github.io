@@ -205,14 +205,25 @@
         text-align: center;
     }
 
-   /* First 3 Logos Above */
-.d-flex.align-items-center.justify-content-center a:nth-child(-n+3) {
-    order: -1; /* Move first 3 logos above */
+  /* Arrange logos in two rows */
+.about-me-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* Last 2 Logos Below */
-.d-flex.align-items-center.justify-content-center a:nth-child(n+4) {
-    order: 1; /* Move last 2 logos below */
+/* First 3 logos in one row */
+.about-me-logos a:nth-child(-n+3) {
+    order: -1;
+    flex: 1 1 auto; /* Ensure even spacing */
+}
+
+/* Last 2 logos in a new row */
+.about-me-logos a:nth-child(n+4) {
+    order: 1;
+    flex: 1 1 auto; /* Ensure even spacing */
+    margin-top: 15px; /* Add spacing between the two rows */
 }
 
 
