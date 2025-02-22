@@ -134,6 +134,57 @@
             box-shadow: 0 0 5px rgba(255, 102, 0, 0.5) !important; /* Adjust glow effect */
         }
 
+        .container-spacing {
+            padding: 100px 0;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-card:hover {
+            transform: scale(1.1);
+        }
+
+        .btn-custom {
+            background-color: white;
+            color: #daa850;
+            border: 2px solid #daa60c; /* Adds a border */
+            font-size: 1.2rem;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
+            min-width: 200px;
+            margin-top: 40px;
+        }
+
+        .btn-custom:hover {
+            background-color: #daa60c;
+            color: white;
+            transform: scale(1.08);
+            border: 2px solid #daa60c;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:active {
+            border-color: #daa60c;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px; /* Adjust spacing between buttons */
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
         /*Mobile-friendly Functionality*/
         @media screen and (max-width: 1024px) { 
             /* Hero Section */
@@ -315,7 +366,7 @@
         <a href="#education" class="btn btn-primary my-2">Education</a>
         <a href="#projects" class="btn btn-primary my-2">View My Projects</a>
         <a href="#about" class="btn btn-primary my-2">About Me</a>
-        <a href="#contact" class="btn btn-primary my-2">Contact Me</a>
+        <a href="#contactMain" class="btn btn-primary my-2">Contact Me</a>
     </div>
 </section>
 
@@ -811,8 +862,8 @@
 
     <!-- Contact-Main Section -->
     <section id="contactMain" class="container container-spacing">
-        <h2 class="text-center mb-5">Get In Touch</h2>
-        <div class="row d-flex flex-column align-items-center">
+        <h2 class="text-center mb-5">Contact</h2>
+        <div class="d-flex align-items-center justify-content-center mb-4" style="margin-bottom: 40px; padding-left: 40px;">
             <div class="col-md-8 mb-4">
                 <div class="service-card text-center p-4">
                     <form id="contact-form">
@@ -842,10 +893,9 @@
     </script>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 text-center">
+    <section id="Profiles" class="py-5 text-center">
         <div class="container text-center">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:cshivang2002@gmail.com" target="_blank" rel="noopener noreferrer">cshivang2002@gmail.com</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/shivang-chaudhary-2235831b5/" target="_blank" rel="noopener noreferrer">Shivang Chaudhary</a></p>
             <p>GitHub: <a href="https://github.com/Shiv716" target="_blank" rel="noopener noreferrer">Shiv716</a></p>
         </div>
