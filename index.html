@@ -891,6 +891,9 @@
         let message = document.getElementById("message").value;
         let mailtoLink = `mailto:cshivang2002@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
         window.location.href = mailtoLink;
+        // Clearing the text-fields after the email is sent!
+        document.getElementById('subject').value = '';
+        document.getElementById('message').value = '';
     }
     </script>
 
