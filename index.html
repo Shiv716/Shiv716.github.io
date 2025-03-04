@@ -239,13 +239,21 @@
                     display: block;
                 }
                 
-                .education-card .card-title {
-                    font-size: 1.2rem;
+                 .education-overlay {
+                    font-size: 1rem !important;
                 }
             
-                .education-card .card-text {
-                    font-size: 0.9rem;
+                .education-overlay p, 
+                .education-overlay li {
+                    font-size: 0.9rem !important;
                     line-height: 1.4;
+                }
+            
+                /* Ensure button text in overlay remains readable */
+                .education-overlay .btn {
+                    font-size: 0.9rem !important;
+                    padding: 6px 16px; /* Slightly smaller padding */
+                    width: 180px; /* Reduce button width */
                 }
             }
         
